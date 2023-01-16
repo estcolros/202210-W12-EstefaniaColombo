@@ -1,46 +1,78 @@
-# Getting Started with Create React App
+# Challenge week 12
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## GoT V2 with React and Flux 🗡️
 
-## Available Scripts
+You will have to program a user interface to reflect the following data model.
 
-In the project directory, you can run:
+In **_Game of Thrones_** there are characters. All these characters have the following information:
 
-### `npm start`
+-   Name
+-   Family they belong to
+-   Age
+-   Status (alive or dead, although initially they are all alive).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+All characters can perform the action of communicating, but each type of character (not each character) communicates in a different way.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+**Note**: this method returns the string with the phrase, it does not print by console.
 
-### `npm test`
+All characters can perform the action of dying, changing their state to dead.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+All characters belong to the same series, **_"Game of Thrones"_**.
 
-### `npm run build`
+Each of these characters can be a king, a fighter, an advisor, or a squire.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-   A **king 👑**, in addition to the information he has as a character, has the following information:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    -   Years of reign.
+    -   When he communicates he says: `"You are all going to die".`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-   A **fighter 🗡**, in addition to the information he has for being a character, has the following information:
 
-### `npm run eject`
+    -   Weapon he uses.
+    -   Dexterity (a value between 0 and 10).
+    -   When communicating he says: `"First I hit and then I ask".`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+-   An **advisor 🎓**, in addition to the information he has for being a character, has the following information:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    -   Character he advises (who can be king, fighter, advisor or squire).
+    -   When communicating he says: `"I don't know why, but I think I'm going to die soon".`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+-   A **squire 🛡**, in addition to the information he has because he is a character, has the following information:
+    -   Character he serves (who can only be a fighter).
+    -   Degree of pelotism (a value between 0 and 10).
+    -   When communicating he says: `"I'm a loser".`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Rules
 
-## Learn More
+Create the following TS files and make them work as modules via import and export:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+-   character.ts, King.ts, Fighter.ts, Advisor.ts, Squire.ts (put inside each class).
+-   characters.ts (create an array with the characters inside).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+| **Game characters** |     **Role**      |                      **Message**                      |
+| :-----------------: | :---------------: | :---------------------------------------------------: |
+|  Joffrey Baratheon  |       King        |              _You are all going to die_               |
+|   Jaime Lannister   |      Fighter      |             _First I hit and then I ask_              |
+| Daenerys Targaryen  |      Fighter      |             _First I hit and then I ask_              |
+|  Tyrion Lannister   | Daenerys' advisor | _I don't know why, but I think I'm going to die soon_ |
+|        Bronn        |  Jaime's squire   |                     _I'm a loser_                     |
+
+-   index.ts (here goes all the rest of the statement, and this will be the entry point).
+
+## Requeriments
+
+1. Make that for each character of the array the corresponding card is shown in the browser:
+    - In the element with class `emoji` has to appear one of these emojis depending on the type of character: 👑 🗡 🎓 🛡.
+    - If the character is dead, its picture should appear upside down (do the necessary CSS).
+    - In the list with class `metadata`, make only the `li` corresponding to the character appear.
+2. When the user clicks the _"dies"_ button, it has to change the state of the character, and the interface should reflect the change.
+3. When the user clicks the _"speaks"_ button, the element with class `communications` must appear with the corresponding text and image. Make this `communications` element have class `on` for 2 seconds and then remove it.
+
+## Netlify
+
+**Deploy GoT DOM :** https://estcolros-week7-got.netlify.app/
+**Deploy GoT REACT :**
+
+## SonarCloud
+
+**Overview:**
