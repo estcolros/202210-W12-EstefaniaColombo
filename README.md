@@ -71,8 +71,8 @@ Create the following TS files and make them work as modules via import and expor
 ## Netlify
 
 **Deploy GoT DOM :** https://estcolros-week7-got.netlify.app/
-**Deploy GoT REACT :**
+**Deploy GoT REACT :** https://202210-w12-estcolros.netlify.app/
 
 ## SonarCloud
 
-**Overview:**
+**Overview:** https://sonarcloud.io/summary/overall?id=estcolros_202210-W12-EstefaniaColombo
