@@ -107,3 +107,18 @@ body {
 .fa-thumbs-down:before {
     color: rgb(253, 31, 31);
 }
+
+header {
+    display: flex;
+    padding: 0rem 3rem;
+}
+
+footer {
+    padding-block: 1rem;
+    text-align: center;
+    background-color: #d27533;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: rgb(0, 0, 0);
+}
