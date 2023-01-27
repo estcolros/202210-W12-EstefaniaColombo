@@ -6,7 +6,9 @@ describe('Given Layout component', () => {
         test('Then the title should be in the screen', () => {
             render(
                 <Router>
-                    <Layout></Layout>
+                    <Layout>
+                        <div>children</div>
+                    </Layout>
                 </Router>
             );
             const elementHeader = screen.getByRole('heading', {

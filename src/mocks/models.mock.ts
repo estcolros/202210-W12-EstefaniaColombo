@@ -2,9 +2,8 @@ import { Advisor } from '../models/advisor';
 import { Fighter } from '../models/fighter';
 import { King } from '../models/king';
 import { Squire } from '../models/squire';
-import { CharactersType } from '../types/character.type';
 
-const joffrey = new King(
+export const joffrey = new King(
     'Joffrey',
     'Baratheon',
     16,
@@ -14,7 +13,7 @@ const joffrey = new King(
     2
 );
 
-const jaime = new Fighter(
+export const jaime = new Fighter(
     'Jaime',
     'Lannister',
     35,
@@ -24,7 +23,7 @@ const jaime = new Fighter(
     8,
     'Sword'
 );
-const daenerys = new Fighter(
+export const daenerys = new Fighter(
     'Daenerys',
     'Targaryen',
     24,
@@ -35,7 +34,7 @@ const daenerys = new Fighter(
     'Dragons'
 );
 
-const tyrion = new Advisor(
+export const tyrion = new Advisor(
     'Tyrion',
     'Lannister',
     39,
@@ -45,25 +44,13 @@ const tyrion = new Advisor(
     daenerys
 );
 
-const bronn = new Squire(
+export const bronn = new Squire(
     'Bronn',
     'AguasNegras',
     56,
     true,
-
     "I'm a loser",
     'assets/images/bronn.jpg',
     5,
     jaime
 );
-
-export const charactersData: CharactersType = [
-    joffrey,
-    jaime,
-    daenerys,
-    tyrion,
-    bronn,
-];
-console.log(charactersData);
-
-export const getCharactersData = () => charactersData;
