@@ -1,4 +1,7 @@
-import { Character } from './character.js';
+import { Character } from './character';
+import { Fighter } from './fighter';
+import { King } from './king';
+import { Squire } from './squire';
 
 export class Advisor extends Character {
     constructor(
@@ -8,7 +11,7 @@ export class Advisor extends Character {
         isAlive: boolean,
         message: string,
         imageSource: string,
-        public advises: string
+        public advises: Fighter | King | Advisor | Squire
     ) {
         super(name, family, age, isAlive, message, imageSource);
         this.message = "I don't know why, but I think I'm going to die soon.";

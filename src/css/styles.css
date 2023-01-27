@@ -73,6 +73,8 @@ body {
     position: fixed;
     top: 0;
     bottom: 0;
+    left: 0;
+    right: 0;
     background-color: transparent;
     padding: 0 100px;
     display: flex;
@@ -84,6 +86,7 @@ body {
 .comunications__on {
     right: 0;
     left: 0;
+    height: 820px;
     background-color: rgba(255, 255, 255, 1);
 }
 .comunications__picture {
@@ -108,7 +111,7 @@ body {
 
 header {
     display: flex;
-    padding: 0rem 3rem;
+    justify-content: center;
 }
 
 footer {
@@ -119,4 +122,5 @@ footer {
     bottom: 0;
     width: 100%;
     color: rgb(0, 0, 0);
+    overflow: hidden;
 }
